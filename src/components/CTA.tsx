@@ -13,13 +13,13 @@ export default function CTA(){
     });
 
     useEffect(() => {
-        scrollYProgress.on('change', value => console.log('value', value))
+        //scrollYProgress.on('change', value => console.log('value', value))
     }, []);
 
     const translateY = useTransform(scrollYProgress, [0, 1], [40, -40]);
 
     return (
-        <section className="bg-black text-white py-[72px] sm:py-24" ref={containerRef}>
+        <section className="bg-black text-white py-[72px] sm:py-24 overflow-x-clip" ref={containerRef}>
             <div className="relative container text-center max-w-xl mx-auto">
                 <motion.div
                 style={{ translateY }}>

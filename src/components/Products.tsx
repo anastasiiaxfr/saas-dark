@@ -12,7 +12,7 @@ export default function Product () {
             ['start end', 'end end'],
         });
         useEffect(() => {
-            scrollYProgress.on('change', (latestValue) => console.log('latestValue', latestValue))
+            //scrollYProgress.on('change', (latestValue) => console.log('latestValue', latestValue))
         }, []);
     const rotateX = useTransform(scrollYProgress, [0, 1], [15, 0]);
     const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
